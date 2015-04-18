@@ -262,7 +262,13 @@
             "Forget about it."
             ],
             bonus: [
-		    "Kwan can kiss my black ass."
+		    "Kwan can kiss my black ass.",
+		    "Bless you my child!!! http://blasfome.com/wp-content/uploads/2012/07/Jesus-Big-Baby-Jesus2202.jpg",
+		    "You want some of THIS??? http://static2.businessinsider.com/~~/f?id=51895f72eab8ea4633000027",
+			"BOOM!!  haha got you!  http://i.imgur.com/VFEuZVs.gif",
+			"This track is so dope it can ease Kwan's ancient ass hip pain.",
+			"http://s3-ec.buzzfed.com/static/2013-10/enhanced/webdr02/24/6/anigif_enhanced-buzz-20679-1382608880-1.gif",
+			"Pssst nobody tell Kwan that he's the only one that doesn't get Style's bonuses"
 		],
             afkpositionCheck: 15,
             afkRankCheck: "ambassador",
