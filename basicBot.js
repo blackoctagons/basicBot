@@ -261,6 +261,9 @@
             "Don't bet on it.",
             "Forget about it."
             ],
+            bonus: [
+		    "Kwan can kiss my black ass."
+		],
             afkpositionCheck: 15,
             afkRankCheck: "ambassador",
             motdEnabled: false,
@@ -1587,7 +1590,24 @@
                      }
                 }
             },
-
+  bonusCommand: {
+                command: ['bonus', 'dope'],
+                rank: 'user',
+                type: 'startsWith',
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                            var crowd = API.getUsers();
+                            var msg = chat.message;
+                            var argument = msg.substring(cmd.length + 1);
+                            var randomUser = Math.floor(Math.random() * crowd.length);
+                            var randomBonus = Math.floor(Math.random() * basicBot.settings.bonus.length);
+                            var randomSentence = Math.floor(Math.random() * 1);
+                            API.sendChat(subChat(basicBot.chat.bonus, {response: basicBot.settings.bonus[randomBonus]}));
+                     }
+                }
+            },
             banCommand: {
                 command: 'ban',
                 rank: 'bouncer',
