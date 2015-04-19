@@ -1,4 +1,3 @@
-
 /**
  *Copyright 2014 Yemasthui
  *Modifications (including forks) of the code to fit personal needs are allowed only for personal use and should refer back to the original source.
@@ -1613,12 +1612,7 @@
                             var randomUser = Math.floor(Math.random() * crowd.length);
                             var randomBonus = Math.floor(Math.random() * basicBot.settings.bonus.length);
                             var randomSentence = Math.floor(Math.random() * 1);
-                            var xmlhttp;
-                     	    var bonuses;
-                     	    var randBon;
-			    xmlhttp=new XMLHttpRequest();
-			    xmlhttp.open('POST', "https://rawgit.com/blackoctagons/basicBot/master/bonus.txt", false);
-			    xmlhttp.send();
+                     
                   
                             API.sendChat(" SOOWOO!!!");
                          //   API.sendChat(subChat(basicBot.chat.bonus, {response: basicBot.settings.bonus[randomBonus]}) + " SOOWOO!");
