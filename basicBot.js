@@ -1613,13 +1613,7 @@
                             var randomBonus = Math.floor(Math.random() * basicBot.settings.bonus.length);
                             var randomSentence = Math.floor(Math.random() * 1);
                             
-                     	var xmlhttp;
-                     	var bonuses;
-			xmlhttp=new XMLHttpRequest();
-			xmlhttp.open('POST', "https://rawgit.com/blackoctagons/basicBot/master/bonus.txt", false);
-			xmlhttp.send();
-			bonuses=xmlhttp.responseText.split('\n');
-			var randBon = Math.floor(Math.random() * bonuses.length);
+                     
                             API.sendChat(" SOOWOO!!!");
                          //   API.sendChat(subChat(basicBot.chat.bonus, {response: basicBot.settings.bonus[randomBonus]}) + " SOOWOO!");
                      }
@@ -1638,7 +1632,7 @@
                             var argument = msg.substring(cmd.length + 1);
                             var randomBall = Math.floor(Math.random() * basicBot.settings.ball.length);
                             var randomSentence = Math.floor(Math.random() * 1);
-                            API.sendChat(argument + "hm");
+                            API.sendChat(argument + "hmm");
                      }
                 }
             },
