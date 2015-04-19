@@ -1615,17 +1615,22 @@
                             var xmlhttp;
                      	    var bonuses;
                      	    var randBon;
-                     	    var bonusarray= $.get("https://rawgit.com/blackoctagons/basicBot/master/bonus.txt"); 
-                    
+                     	    var bonusarray;
+                     	    
+                     	    $.get('bonus.txt',function(data){
+			  var bonuses=data.split('\n');
+					    }
+                    	randBon = Math.floor(Math.random() * bonuses.length);
+                            API.sendChat(bonuses[randBon] + " SOOWOO!!!");
+                            
 			   // xmlhttp = new XMLHttpRequest();
 			   // xmlhttp.open('POST', "https://rawgit.com/blackoctagons/basicBot/master/bonus.txt", true);
 			  //  xmlhttp.send();
 
-				bonuses=bonusarray.split('\n');
+			//	bonuses=bonusarray.split('\n');
                             //bonuses=xmlhttp.responseText.split('\n');
 			   // randBon = Math.floor(Math.random() * bonuses.length);
 			    
-                            API.sendChat(bonuses[1] + " SOOWOO!!!");
                          //   API.sendChat(subChat(basicBot.chat.bonus, {response: basicBot.settings.bonus[randomBonus]}) + " SOOWOO!");
                      }
                 }
@@ -1643,7 +1648,7 @@
                             var argument = msg.substring(cmd.length + 1);
                             var randomBall = Math.floor(Math.random() * basicBot.settings.ball.length);
                             var randomSentence = Math.floor(Math.random() * 1);
-                            API.sendChat(argument + "TRAPstairrz!");
+                            API.sendChat(argument + "SIGH, I CANNOT!");
                      }
                 }
             },
