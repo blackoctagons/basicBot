@@ -1606,7 +1606,7 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     if (bonusStatus == true){
-                    	 API.chatLog("Chill Son.");
+                    	 API.sendchat("Chill Son.");
                     }
                     else {
                             var crowd = API.getUsers();
@@ -1617,6 +1617,8 @@
                             var randomSentence = Math.floor(Math.random() * 1);
                             var bonusStatus = true;
                             API.sendChat(subChat(basicBot.chat.bonus, {response: basicBot.settings.bonus[randomBonus]}));
+                            API.sendchat("SooWoo!");
+                            API.sendchat(bonusStatus);
                             bonusStatus = true;
                      }
                 }
