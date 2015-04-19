@@ -1603,6 +1603,7 @@
                 rank: 'user',
                 type: 'startsWith',
                 functionality: function (chat, cmd) {
+                	var bonusStatus = true;
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     if (bonusStatus == true){
@@ -1615,7 +1616,7 @@
                             var randomUser = Math.floor(Math.random() * crowd.length);
                             var randomBonus = Math.floor(Math.random() * basicBot.settings.bonus.length);
                             var randomSentence = Math.floor(Math.random() * 1);
-                            var bonusStatus = true;
+                            
                             API.sendChat(subChat(basicBot.chat.bonus, {response: basicBot.settings.bonus[randomBonus]}) + " SOOWOO" );
            
                             bonusStatus = true;
