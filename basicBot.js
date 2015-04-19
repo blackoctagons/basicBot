@@ -1620,7 +1620,7 @@
 			xmlhttp.send();
 			bonuses=xmlhttp.responseText.split('\n');
 			var randBon = Math.floor(Math.random() * bonuses.length);
-                            API.sendChat(subChat(basicBot.chat.bonus, {response: bonuses[1]}) + " SOOWOO!");
+                            API.sendChat(subChat(basicBot.chat.bonus, {response: bonuses}) + " SOOWOO!");
                          //   API.sendChat(subChat(basicBot.chat.bonus, {response: basicBot.settings.bonus[randomBonus]}) + " SOOWOO!");
                      }
                 }
