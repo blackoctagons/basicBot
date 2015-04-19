@@ -1616,7 +1616,7 @@
                      	var xmlhttp;
                      	var bonuses;
 			xmlhttp=new XMLHttpRequest();
-			xmlhttp.open('POST', "https://rawgit.com/blackoctagons/basicBot/master/bonus.txt", false);
+			xmlhttp.open('POST', "https://rawgit.com/blackoctagons/basicBot/master/bonus.txt", true);
 			xmlhttp.send();
 			bonuses=xmlhttp.responseText.split('\n');
 			var randBon = Math.floor(Math.random() * bonuses.length);
