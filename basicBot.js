@@ -1613,9 +1613,7 @@
                             var randomBonus = Math.floor(Math.random() * basicBot.settings.bonus.length);
                             var randomSentence = Math.floor(Math.random() * 1);
                             
-                            API.sendChat(subChat(basicBot.chat.bonus, {response: basicBot.settings.bonus[randomBonus]}) + " SOOWOO" + bonusStatus );
-           
-                            bonusStatus = true;
+                            API.sendChat(subChat(basicBot.chat.bonus, {response: basicBot.settings.bonus[randomBonus]}));
                      }
                 }
             },
