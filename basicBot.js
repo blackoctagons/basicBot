@@ -4,7 +4,6 @@
  *This software is not for profit, any extension, or unauthorised person providing this software is not authorised to be in a position of any monetary gain from this use of this software. Any and all money gained under the use of the software (which includes donations) must be passed on to the original author.
  */
 
-
 (function () {
 
     API.getWaitListPosition = function(id){
@@ -19,6 +18,24 @@
         }
         return -1;
     };
+    
+    function readTextFile(file)
+{
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, false);
+    rawFile.onreadystatechange = function ()
+    {
+        if(rawFile.readyState === 4)
+        {
+            if(rawFile.status === 200 || rawFile.status == 0)
+            {
+                var allText = rawFile.responseText;
+                alert(allText);
+            }
+        }
+    }
+    rawFile.send(null);
+}
 
     var kill = function () {
         clearInterval(basicBot.room.autodisableInterval);
@@ -1625,13 +1642,14 @@
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
                     else {
-                            var crowd = API.getUsers();
+                         /*   var crowd = API.getUsers();
                             var msg = chat.message;
                             var argument = msg.substring(cmd.length + 1);
                             var randomBall = Math.floor(Math.random() * basicBot.settings.ball.length);
                             var randomSentence = Math.floor(Math.random() * 1);
                             basicBot.chat.bonus.push(argument)
-                            API.sendChat(argument);
+                            API.sendChat(argument);*/
+                            readTextFile("bonus.txt");
                      }
                 }
             },
