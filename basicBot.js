@@ -1617,8 +1617,8 @@
                             var randomSentence = Math.floor(Math.random() * 1);
                             var bonusStatus = true;
                             API.sendChat(subChat(basicBot.chat.bonus, {response: basicBot.settings.bonus[randomBonus]}));
-                            API.sendchat("SooWoo!");
-                            API.sendchat(bonusStatus);
+                            API.sendChat("SooWoo!");
+                            API.sendChat(bonusStatus);
                             bonusStatus = true;
                      }
                 }
