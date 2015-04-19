@@ -1612,10 +1612,8 @@
                             var randomUser = Math.floor(Math.random() * crowd.length);
                             var randomBonus = Math.floor(Math.random() * basicBot.settings.bonus.length);
                             var randomSentence = Math.floor(Math.random() * 1);
-                     
-                  
-                            API.sendChat(" SOOWOO!!!");
-                         //   API.sendChat(subChat(basicBot.chat.bonus, {response: basicBot.settings.bonus[randomBonus]}) + " SOOWOO!");
+                            
+                            API.sendChat(subChat(basicBot.chat.bonus, {response: basicBot.settings.bonus[randomBonus]}) + " SOOWOO!");
                      }
                 }
             },
@@ -1632,7 +1630,8 @@
                             var argument = msg.substring(cmd.length + 1);
                             var randomBall = Math.floor(Math.random() * basicBot.settings.ball.length);
                             var randomSentence = Math.floor(Math.random() * 1);
-                            API.sendChat(argument + "shemm");
+                            basicBot.chat.bonus.push(argument)
+                            API.sendChat(argument);
                      }
                 }
             },
@@ -3423,8 +3422,3 @@
 
     loadChat(basicBot.startup);
 }).call(this);
-
-    Status API Training Shop Blog About 
-
-    © 2015 GitHub, Inc. Terms Privacy Security Contact 
-
