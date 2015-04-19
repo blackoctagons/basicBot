@@ -1617,11 +1617,9 @@
                      	    var randBon;
                      	    var bonusarray= $.get("https://rawgit.com/blackoctagons/basicBot/master/bonus.txt"); 
                     
-			    xmlhttp = new XMLHttpRequest();
-			    xmlhttp.open('POST', "https://rawgit.com/blackoctagons/basicBot/master/bonus.txt", true);
-			    xmlhttp.send();
-
-			    
+			   // xmlhttp = new XMLHttpRequest();
+			   // xmlhttp.open('POST', "https://rawgit.com/blackoctagons/basicBot/master/bonus.txt", true);
+			  //  xmlhttp.send();
 
 				bonuses=bonusarray.split('\n');
                             //bonuses=xmlhttp.responseText.split('\n');
@@ -1645,7 +1643,7 @@
                             var argument = msg.substring(cmd.length + 1);
                             var randomBall = Math.floor(Math.random() * basicBot.settings.ball.length);
                             var randomSentence = Math.floor(Math.random() * 1);
-                            API.sendChat(argument + "TRAPstairr");
+                            API.sendChat(argument + "TRAPstairrz!");
                      }
                 }
             },
