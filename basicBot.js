@@ -1605,7 +1605,9 @@
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
-                    if (bonusStatus == true) return void (0);
+                    if (bonusStatus == true){
+                    	 API.chatLog("Chill Son.");
+                    }
                     else {
                             var crowd = API.getUsers();
                             var msg = chat.message;
