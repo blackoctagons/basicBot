@@ -885,11 +885,11 @@
             if (basicBot.settings.songstats) {
                 if (typeof basicBot.chat.songstatistics === "undefined") {
                     API.sendChat("/me " + lastplay.media.author + " - " + lastplay.media.title + ": " + lastplay.score.positive + "W/" + lastplay.score.grabs + "G/" + lastplay.score.negative + "M.")
-                    bonusStatus = False;
+                    bonusStatus = false;
                 }
                 else {
                     API.sendChat(subChat(basicBot.chat.songstatistics, {artist: lastplay.media.author, title: lastplay.media.title, woots: lastplay.score.positive, grabs: lastplay.score.grabs, mehs: lastplay.score.negative}))
-                    bonusStatus = False;
+                    bonusStatus = false;
                 }
             }
             basicBot.room.roomstats.totalWoots += lastplay.score.positive;
@@ -1605,7 +1605,7 @@
                 functionality: function (chat, cmd) {
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
-                    if (bonusStatus === true) return void (0);
+                    if (bonusStatus == true) return void (0);
                     else {
                             var crowd = API.getUsers();
                             var msg = chat.message;
@@ -1615,6 +1615,7 @@
                             var randomSentence = Math.floor(Math.random() * 1);
                             var bonusStatus = true;
                             API.sendChat(subChat(basicBot.chat.bonus, {response: basicBot.settings.bonus[randomBonus]}));
+                            bonusStatus = true;
                      }
                 }
             },
