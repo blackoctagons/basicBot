@@ -1603,12 +1603,8 @@
                 rank: 'user',
                 type: 'startsWith',
                 functionality: function (chat, cmd) {
-                	var bonusStatus = true;
                     if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
                     if (!basicBot.commands.executable(this.rank, chat)) return void (0);
-                    if (bonusStatus == true){
-                    	 API.sendchat("Chill Son.");
-                    }
                     else {
                             var crowd = API.getUsers();
                             var msg = chat.message;
@@ -1617,7 +1613,7 @@
                             var randomBonus = Math.floor(Math.random() * basicBot.settings.bonus.length);
                             var randomSentence = Math.floor(Math.random() * 1);
                             
-                            API.sendChat(subChat(basicBot.chat.bonus, {response: basicBot.settings.bonus[randomBonus]}) + " SOOWOO" );
+                            API.sendChat(subChat(basicBot.chat.bonus, {response: basicBot.settings.bonus[randomBonus]}) + " SOOWOO" + bonusStatus );
            
                             bonusStatus = true;
                      }
