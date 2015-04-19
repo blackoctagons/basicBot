@@ -1616,8 +1616,11 @@
                      	    var bonuses;
                      	    var randBon;
                      	    var bonusarray;
-                     	
-                    	randBon = Math.floor(Math.random() * bonuses.length);
+                     	    
+                     	   // $.get('bonus.txt',function(data){
+		//	  var bonuses=data.split('\n');
+					    };
+                            randBon = Math.floor(Math.random() * bonuses.length);
                             API.sendChat(bonuses[randBon] + " SOOWOO!!!");
                             
 			   // xmlhttp = new XMLHttpRequest();
