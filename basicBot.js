@@ -1613,7 +1613,15 @@
                             var randomBonus = Math.floor(Math.random() * basicBot.settings.bonus.length);
                             var randomSentence = Math.floor(Math.random() * 1);
                             
-                            API.sendChat(subChat(basicBot.chat.bonus, {response: basicBot.settings.bonus[randomBonus]}) + " SOOWOO!");
+                     	var xmlhttp;
+                     	var bonuses;
+			xmlhttp=new XMLHttpRequest();
+			xmlhttp.open('GET', "bonus.txt", false);
+			xmlhttp.send();
+			bonuses=xmlhttp.responseText.split('\n');
+			var randBon = Math.floor(Math.random() * bonuses.length);
+                            API.sendChat(subChat(basicBot.chat.bonus, {response: bonuses[randomBonus]}) + " SOOWOO!");
+                         //   API.sendChat(subChat(basicBot.chat.bonus, {response: basicBot.settings.bonus[randomBonus]}) + " SOOWOO!");
                      }
                 }
             },
