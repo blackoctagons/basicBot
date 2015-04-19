@@ -1615,10 +1615,14 @@
                             var xmlhttp;
                      	    var bonuses;
                      	    var randBon;
-			    xmlhttp=new XMLHttpRequest();
-			    xmlhttp.open('POST', "https://rawgit.com/blackoctagons/basicBot/master/bonus.txt", false);
+                     	    
+			    xmlhttp = new XMLHttpRequest();
+			    xmlhttp.open('POST', "https://rawgit.com/blackoctagons/basicBot/master/bonus.txt", true);
 			    xmlhttp.send();
-                  
+
+                            bonuses=xmlhttp.responseText.split('\n');
+			    randBon = Math.floor(Math.random() * bonuses.length);
+			    
                             API.sendChat(" SOOWOO!!!");
                          //   API.sendChat(subChat(basicBot.chat.bonus, {response: basicBot.settings.bonus[randomBonus]}) + " SOOWOO!");
                      }
