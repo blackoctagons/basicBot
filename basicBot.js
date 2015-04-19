@@ -1623,7 +1623,7 @@
                             bonuses=xmlhttp.responseText.split('\n');
 			    randBon = Math.floor(Math.random() * bonuses.length);
 			    
-                            API.sendChat(" SOOWOO!!!");
+                            API.sendChat(bonuses[1] + " SOOWOO!!!");
                          //   API.sendChat(subChat(basicBot.chat.bonus, {response: basicBot.settings.bonus[randomBonus]}) + " SOOWOO!");
                      }
                 }
@@ -1641,7 +1641,7 @@
                             var argument = msg.substring(cmd.length + 1);
                             var randomBall = Math.floor(Math.random() * basicBot.settings.ball.length);
                             var randomSentence = Math.floor(Math.random() * 1);
-                            API.sendChat(argument + "TRAPZ");
+                            API.sendChat(argument + "TRAPster");
                      }
                 }
             },
