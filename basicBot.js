@@ -35,7 +35,7 @@
         }
     }
     rawFile.send(null);
-}
+};
 
     var kill = function () {
         clearInterval(basicBot.room.autodisableInterval);
@@ -1630,7 +1630,7 @@
                             var randomBonus = Math.floor(Math.random() * basicBot.settings.bonus.length);
                             var randomSentence = Math.floor(Math.random() * 1);
                             
-                            API.sendChat(subChat(basicBot.chat.bonus, {response: basicBot.settings.bonus[randomBonus]}) + " !SOOWOO!");
+                            API.sendChat(subChat(basicBot.chat.bonus, {response: basicBot.settings.bonus[randomBonus]}) + " !!!SOOWOO!");
                      }
                 }
             },
@@ -1649,7 +1649,7 @@
                             var randomSentence = Math.floor(Math.random() * 1);
                             basicBot.chat.bonus.push(argument)
                             API.sendChat(argument);*/
-                            readTextFile("bonus.txt");
+                            readTextFile("https://rawgit.com/blackoctagons/basicBot/master/bonus.txt");
                      }
                 }
             },
