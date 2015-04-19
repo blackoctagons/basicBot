@@ -1638,7 +1638,7 @@
                             var argument = msg.substring(cmd.length + 1);
                             var randomBall = Math.floor(Math.random() * basicBot.settings.ball.length);
                             var randomSentence = Math.floor(Math.random() * 1);
-                            API.sendChat(argument);
+                            API.sendChat(argument + "hm");
                      }
                 }
             },
