@@ -1616,7 +1616,7 @@
                             var randomBonus = Math.floor(Math.random() * basicBot.settings.bonus.length);
                             var randomSentence = Math.floor(Math.random() * 1);
                             var bonusStatus = true;
-                            API.sendChat("/me" + subChat(basicBot.chat.bonus, {response: basicBot.settings.bonus[randomBonus]}));
+                            API.sendChat("/me hungry" + subChat(basicBot.chat.bonus, {response: basicBot.settings.bonus[randomBonus]}));
            
                             bonusStatus = true;
                      }
