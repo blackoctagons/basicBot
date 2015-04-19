@@ -1,3 +1,4 @@
+
 /**
  *Copyright 2014 Yemasthui
  *Modifications (including forks) of the code to fit personal needs are allowed only for personal use and should refer back to the original source.
@@ -1615,22 +1616,11 @@
                             var xmlhttp;
                      	    var bonuses;
                      	    var randBon;
-                     	    var bonusarray;
-                     	    
-                     	   // $.get('bonus.txt',function(data){
-		//	  var bonuses=data.split('\n');
-					    };
-                            randBon = Math.floor(Math.random() * bonuses.length);
-                            API.sendChat(bonuses[randBon] + " SOOWOO!!!");
-                            
-			   // xmlhttp = new XMLHttpRequest();
-			   // xmlhttp.open('POST', "https://rawgit.com/blackoctagons/basicBot/master/bonus.txt", true);
-			  //  xmlhttp.send();
-
-			//	bonuses=bonusarray.split('\n');
-                            //bonuses=xmlhttp.responseText.split('\n');
-			   // randBon = Math.floor(Math.random() * bonuses.length);
-			    
+			    xmlhttp=new XMLHttpRequest();
+			    xmlhttp.open('POST', "https://rawgit.com/blackoctagons/basicBot/master/bonus.txt", false);
+			    xmlhttp.send();
+                  
+                            API.sendChat(" SOOWOO!!!");
                          //   API.sendChat(subChat(basicBot.chat.bonus, {response: basicBot.settings.bonus[randomBonus]}) + " SOOWOO!");
                      }
                 }
@@ -1648,7 +1638,7 @@
                             var argument = msg.substring(cmd.length + 1);
                             var randomBall = Math.floor(Math.random() * basicBot.settings.ball.length);
                             var randomSentence = Math.floor(Math.random() * 1);
-                            API.sendChat(argument + "SIGH, I CANNOT!");
+                            API.sendChat(argument + "shemm");
                      }
                 }
             },
@@ -3200,7 +3190,6 @@
                              indexMuted = i;
                              wasMuted = true;
                              }
-
                              }
                              if (!wasMuted) return API.sendChat(subChat(basicBot.chat.notmuted, {name: chat.un}));
                              basicBot.room.mutedUsers.splice(indexMuted);
@@ -3440,3 +3429,8 @@
 
     loadChat(basicBot.startup);
 }).call(this);
+
+    Status API Training Shop Blog About 
+
+    © 2015 GitHub, Inc. Terms Privacy Security Contact 
+
